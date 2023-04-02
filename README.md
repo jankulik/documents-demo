@@ -1,0 +1,1 @@
+# A demo of analysing legal document using OpenAI's API
