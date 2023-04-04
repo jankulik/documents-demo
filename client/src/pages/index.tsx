@@ -3,13 +3,12 @@ import { useState, useRef, useEffect } from 'react';
 import Head from 'next/head';
 import { useStyles } from '@/styles/home.styles';
 import DropzoneButton from '@/components/Dropzone';
-import { ScrollArea, Title, Text, Overlay, Space } from '@mantine/core';
+import { Image, ScrollArea, Title, Text, Overlay, Space } from '@mantine/core';
 import { showNotification } from '@mantine/notifications';
 import { IconCheck } from '@tabler/icons-react';
 import ChatStripe from '@/components/ChatStripe';
 import { postData } from '@/utils/helpers/postData';
 import PromptInput from '@/components/PromptInput';
-import Image from 'next/image';
 
 export default function Home() {
   const { classes, theme } = useStyles();
@@ -146,15 +145,11 @@ export default function Home() {
       </Head>
 
       <div className={classes.wrapper}>
-        <div style={{ height: '40px', width: '100%', position: 'relative' }}>
-          <Image
-            alt='AIMMS logo'
-            src='/logo_text.png'
-            style={{objectFit: 'contain'}}
-            fill
-            priority
-          />
-        </div>
+        <Image
+          alt='AIMMS logo'
+          src='/logo_text.png'
+          width={100}
+        />
 
         <Title className={classes.title}>
           Upload a document and ask your{' '}
